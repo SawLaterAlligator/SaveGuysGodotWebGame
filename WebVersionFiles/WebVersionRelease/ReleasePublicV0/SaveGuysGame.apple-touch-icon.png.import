@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ugrlk6ct5toi"
-path="res://.godot/imported/SaveGuysGame.apple-touch-icon.png-142c42c163c7f42dd45afcd31f7fa038.ctex"
+path="res://.godot/imported/SaveGuysGame.apple-touch-icon.png-851a289bdbf78525ecbd6a7567d8d514.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://WebVersion/SaveGuysGame.apple-touch-icon.png"
-dest_files=["res://.godot/imported/SaveGuysGame.apple-touch-icon.png-142c42c163c7f42dd45afcd31f7fa038.ctex"]
+source_file="res://WebVersionFiles/WebVersionRelease/ReleasePublicV0/SaveGuysGame.apple-touch-icon.png"
+dest_files=["res://.godot/imported/SaveGuysGame.apple-touch-icon.png-851a289bdbf78525ecbd6a7567d8d514.ctex"]
 
 [params]
 

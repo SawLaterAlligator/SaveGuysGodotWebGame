@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7fbacw1su6gl"
-path="res://.godot/imported/SaveGuysGame.icon.png-008664d297c65a16ef16f38611cdef3f.ctex"
+path="res://.godot/imported/SaveGuysGame.icon.png-00b22f9694d38607b811877d08e5b08c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://WebVersion/WebVersionRelease/V1/SaveGuysGame.icon.png"
-dest_files=["res://.godot/imported/SaveGuysGame.icon.png-008664d297c65a16ef16f38611cdef3f.ctex"]
+source_file="res://WebVersionFiles/WebVersionRelease/ReleasePublicV1/SaveGuysGame.icon.png"
+dest_files=["res://.godot/imported/SaveGuysGame.icon.png-00b22f9694d38607b811877d08e5b08c.ctex"]
 
 [params]
 
