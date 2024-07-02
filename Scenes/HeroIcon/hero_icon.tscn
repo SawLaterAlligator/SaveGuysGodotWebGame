@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5fumtmq3w3wm"]
+
+[ext_resource type="Texture2D" uid="uid://wq0tk0sc4vro" path="res://Assets/GodotIcon/icon.svg" id="1_ddwqq"]
+
+[node name="HeroIcon" type="Control"]
+layout_mode = 3
+anchor_right = 0.199
+anchor_bottom = 0.362
+offset_right = 0.279984
+offset_bottom = 0.359985
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/PanelContainer"]
+position = Vector2(104, 107)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ddwqq")

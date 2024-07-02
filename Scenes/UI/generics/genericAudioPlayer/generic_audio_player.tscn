@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg5ui3ldxksmu"]
+
+[ext_resource type="Script" path="res://Scenes/UI/generics/genericAudioPlayer/generic_audio_player.gd" id="1_lc73i"]
+
+[node name="genericAudioPlayer" type="AudioStreamPlayer"]
+script = ExtResource("1_lc73i")

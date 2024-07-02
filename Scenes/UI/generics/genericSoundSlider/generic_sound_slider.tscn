@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://5nnup27aewub"]
+
+[ext_resource type="Script" path="res://Scenes/UI/generics/genericSoundSlider/genericSoundSlider.gd" id="1_kqbht"]
+[ext_resource type="PackedScene" uid="uid://dg5ui3ldxksmu" path="res://Scenes/UI/generics/genericAudioPlayer/generic_audio_player.tscn" id="2_ial41"]
+
+[node name="genericSoundSlider" type="HSlider"]
+offset_right = 8.0
+offset_bottom = 16.0
+max_value = 1.0
+step = 0.001
+tick_count = 20
+ticks_on_borders = true
+script = ExtResource("1_kqbht")
+
+[node name="genericAudioPlayer" parent="." instance=ExtResource("2_ial41")]
+audioType = "Ui Sfx"
+connectingSignal = "optionsMusicSliderChanged"
+includedSfx = true
+rolloverSfx = true
+
+[connection signal="drag_ended" from="." to="." method="_on_drag_ended"]
+[connection signal="drag_started" from="." to="." method="_on_drag_started"]
+[connection signal="value_changed" from="." to="." method="_on_value_changed"]

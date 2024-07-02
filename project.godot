@@ -1,0 +1,61 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="SaveGuysGame"
+config/version="0.9.0"
+run/main_scene="res://Scenes/Game Scenes/main_scene.tscn"
+config/features=PackedStringArray("4.2", "GL Compatibility")
+config/icon="res://Assets/HeroCoinsGeneral/HeroCoins5x/HBJTreeHead5x.png"
+
+[autoload]
+
+SignalManager="*res://Singletons/signalManager.gd"
+UniversalVariables="*res://Singletons/universalVariables.gd"
+UniversalText="*res://Singletons/universalText.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "yellow",
+"res://ExportedVersions/": "teal",
+"res://Scenes/": "orange",
+"res://Singletons/": "red",
+"res://WebVersion/": "purple",
+"res://addons/": "pink"
+}
+
+[filesystem]
+
+import/blender/enabled=false
+
+[input]
+
+SPACE={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"echo":false,"script":null)
+]
+}
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://db15knpnjxxei"]
+
+[ext_resource type="PackedScene" uid="uid://ddhpkj8lmdxal" path="res://Scenes/UI/generics/genericButton/generic_button.tscn" id="1_ujtwb"]
+[ext_resource type="StyleBox" uid="uid://7vbk2u5fhrgr" path="res://Assets/Fill Settings/med_blue.tres" id="2_sdmr7"]
+[ext_resource type="FontFile" uid="uid://sd738si6boxi" path="res://Assets/Fonts/Romulus.ttf" id="2_x8c0q"]
+[ext_resource type="StyleBox" uid="uid://cqljqac4u8u12" path="res://Assets/Fill Settings/light_blue.tres" id="3_51hcj"]
+[ext_resource type="StyleBox" uid="uid://cn3w34xx7kq1y" path="res://Assets/Fill Settings/med_blue_sat1.tres" id="4_wp020"]
+[ext_resource type="StyleBox" uid="uid://cs2rpu3kxrm8u" path="res://Assets/Fill Settings/med_blue_sat2.tres" id="5_y24et"]
+[ext_resource type="PackedScene" uid="uid://dg5ui3ldxksmu" path="res://Scenes/UI/generics/genericAudioPlayer/generic_audio_player.tscn" id="6_nxst2"]
+
+[node name="OptionsAndResetRow" type="HBoxContainer"]
+offset_right = 348.0
+offset_bottom = 120.0
+
+[node name="OptionsButton" parent="." instance=ExtResource("1_ujtwb")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.45
+theme_override_colors/font_outline_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_x8c0q")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("2_sdmr7")
+theme_override_styles/hover = ExtResource("4_wp020")
+theme_override_styles/pressed = ExtResource("5_y24et")
+text = "Options"
+buttonText = "Options"
+buttonSignal = "buttonOptions"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.35
+theme_override_styles/panel = ExtResource("3_51hcj")
+
+[node name="ButtonTwo" parent="." instance=ExtResource("1_ujtwb")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.45
+theme_override_colors/font_outline_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_x8c0q")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("2_sdmr7")
+theme_override_styles/hover = ExtResource("4_wp020")
+theme_override_styles/pressed = ExtResource("5_y24et")
+text = "Tutorial"
+buttonText = "Tutorial"
+buttonSignal = "buttonTwo"
+
+[node name="OptionsAudioPlayer" parent="." instance=ExtResource("6_nxst2")]
+bus = &"Ui Sfx"
+audioType = "Ui Sfx"
+connectingSignal = "buttonOptions"
+includedSfx = true
+clickSfx = true
+
+[node name="TutorialAudioPlayer" parent="." instance=ExtResource("6_nxst2")]
+bus = &"Ui Sfx"
+audioType = "Ui Sfx"
+connectingSignal = "buttonTwo"
+includedSfx = true
+clickSfx = true

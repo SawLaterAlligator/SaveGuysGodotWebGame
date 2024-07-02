@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddhpkj8lmdxal"]
+
+[ext_resource type="FontFile" uid="uid://tnv8oesqv2b0" path="res://Assets/Fonts/VCR_OSD_MONO_1.001.ttf" id="1_hkqbi"]
+[ext_resource type="Script" path="res://Scenes/UI/generics/genericButton/generic_button.gd" id="1_tm0is"]
+
+[node name="genericButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_hkqbi")
+script = ExtResource("1_tm0is")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

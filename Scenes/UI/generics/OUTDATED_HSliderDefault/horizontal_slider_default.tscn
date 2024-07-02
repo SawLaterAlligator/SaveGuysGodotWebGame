@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://k7i5eihmrfs2"]
+
+[ext_resource type="Script" path="res://Scenes/UI/generics/OUTDATED_HSliderDefault/horizontal_slider_default.gd" id="1_536pi"]
+[ext_resource type="PackedScene" uid="uid://dg5ui3ldxksmu" path="res://Scenes/UI/generics/genericAudioPlayer/generic_audio_player.tscn" id="2_l5nt3"]
+
+[node name="HorizontalSliderDefault" type="HBoxContainer"]
+offset_right = 640.0
+offset_bottom = 40.0
+script = ExtResource("1_536pi")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "FILLER FILLER"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 12
+
+[node name="HSlider" type="HSlider" parent="MarginContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+text = "RESET STANDARD VALUE"
+
+[node name="interactSoundPlayer" parent="." instance=ExtResource("2_l5nt3")]
+audioType = "Ui Sfx"
+connectingSignal = "buttonSlider"
+includedSfx = true
+rolloverSfx = true
+
+[connection signal="drag_ended" from="MarginContainer/HSlider" to="." method="_on_h_slider_drag_ended"]
+[connection signal="drag_started" from="MarginContainer/HSlider" to="." method="_on_h_slider_drag_started"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

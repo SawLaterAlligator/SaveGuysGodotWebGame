@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6cwewmtu7tqu"]
+
+[ext_resource type="Script" path="res://Scenes/UI/TopRowStats/top_row_stats.gd" id="1_t5rf8"]
+[ext_resource type="LabelSettings" uid="uid://cd1qpr8xstu5s" path="res://Assets/LabelSettings/top_row.tres" id="2_dyx1b"]
+[ext_resource type="StyleBox" uid="uid://7vbk2u5fhrgr" path="res://Assets/Fill Settings/med_blue.tres" id="2_f3rfo"]
+[ext_resource type="StyleBox" uid="uid://cqljqac4u8u12" path="res://Assets/Fill Settings/light_blue.tres" id="4_5vsf5"]
+
+[node name="Top Row Stats" type="HBoxContainer"]
+offset_right = 728.0
+offset_bottom = 54.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 9.0
+script = ExtResource("1_t5rf8")
+
+[node name="RestockPanel" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.6
+theme_override_styles/panel = ExtResource("2_f3rfo")
+
+[node name="RestockLabel" type="Label" parent="RestockPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "3 Rounds Until Restock"
+label_settings = ExtResource("2_dyx1b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_right = 0
+
+[node name="HighScorePanel" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_f3rfo")
+
+[node name="Panel" type="Panel" parent="MarginContainer/HighScorePanel"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_5vsf5")
+
+[node name="HighScoreLabel" type="Label" parent="MarginContainer/HighScorePanel"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Healed Heroes in furthest run: "
+label_settings = ExtResource("2_dyx1b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StreakPanel" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.6
+theme_override_styles/panel = ExtResource("2_f3rfo")
+
+[node name="StreakLabel" type="Label" parent="StreakPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Heroes Healed: 0"
+label_settings = ExtResource("2_dyx1b")
+horizontal_alignment = 1
+vertical_alignment = 1

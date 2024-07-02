@@ -1,0 +1,179 @@
+[gd_scene load_steps=23 format=3 uid="uid://dxuq8ebbvu6gj"]
+
+[ext_resource type="Script" path="res://Scenes/Game Scenes/main_scene.gd" id="1_40eer"]
+[ext_resource type="PackedScene" uid="uid://jeve4hm2bhhy" path="res://Scenes/UI/ProgressBarDefault/health_bar.tscn" id="2_1sob7"]
+[ext_resource type="Texture2D" uid="uid://b57akbod7mada" path="res://Assets/HeroCoins5x/HBJTechnoMouse5x.png" id="2_3u2vc"]
+[ext_resource type="LabelSettings" uid="uid://ccx2pb1di84us" path="res://Assets/Label Settings/game_credits.tres" id="2_4kyat"]
+[ext_resource type="LabelSettings" uid="uid://dtcx1ll23som" path="res://Assets/Label Settings/game_title.tres" id="2_84w6v"]
+[ext_resource type="PackedScene" uid="uid://b6cwewmtu7tqu" path="res://Scenes/UI/TopRowStats/top_row_stats.tscn" id="2_apq7f"]
+[ext_resource type="PackedScene" uid="uid://dohhlk87j6kl7" path="res://Scenes/UI/generics/genericSprite2d/generic_sprite_2d.tscn" id="2_jdyx3"]
+[ext_resource type="LabelSettings" uid="uid://dgd5560p01ggc" path="res://Assets/Label Settings/game_subtitles.tres" id="2_xyiiu"]
+[ext_resource type="PackedScene" uid="uid://cxuaikqkqe1mv" path="res://Scenes/UI/HealingRow/ui_healing_row.tscn" id="3_21b42"]
+[ext_resource type="Texture2D" uid="uid://cqfvaq1gn3hst" path="res://Assets/HeroCoins5x/HBJTreeHead5x.png" id="3_lduvi"]
+[ext_resource type="Texture2D" uid="uid://wq0tk0sc4vro" path="res://icon.svg" id="3_pkass"]
+[ext_resource type="Texture2D" uid="uid://doasy33sl6qg" path="res://Assets/HeroCoins5x/HBJTinyMan5x.png" id="4_1yvpr"]
+[ext_resource type="PackedScene" uid="uid://db15knpnjxxei" path="res://Scenes/UI/OptionsAndResetRow/options_and_reset_row.tscn" id="4_jnh7o"]
+[ext_resource type="Texture2D" uid="uid://dutdr5jxsp6q" path="res://Assets/HeroCoins5x/HBJSkeleton5x.png" id="5_fb73r"]
+[ext_resource type="Texture2D" uid="uid://cjxrm436hw8kr" path="res://Assets/HeroCoins5x/HBJMagma5x.png" id="6_wq4nn"]
+[ext_resource type="Texture2D" uid="uid://do10l3h08g7h6" path="res://Assets/HeroCoins5x/HBJLantern5x.png" id="7_xya15"]
+[ext_resource type="Texture2D" uid="uid://crdu5hflnpskn" path="res://Assets/HeroCoins5x/HBJGhost5x.png" id="8_v41ng"]
+[ext_resource type="Texture2D" uid="uid://bl56rt1r6lq0f" path="res://Assets/HeroCoins5x/HBJDancer5x.png" id="9_fxwph"]
+[ext_resource type="Texture2D" uid="uid://d4goc12f7yema" path="res://Assets/HeroCoins5x/HBJBigJewel5x.png" id="10_ku4o6"]
+[ext_resource type="Texture2D" uid="uid://dcv6g7k2n8o50" path="res://Assets/HeroCoins5x/HBJAlienWarrior5x.png" id="11_f52ux"]
+[ext_resource type="StyleBox" uid="uid://7vbk2u5fhrgr" path="res://Assets/Fill Settings/med_blue.tres" id="13_jsudl"]
+[ext_resource type="StyleBox" uid="uid://by61di40mjsuf" path="res://Assets/Fill Settings/purple.tres" id="18_bl42f"]
+
+[node name="Main Scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_40eer")
+generic_sprite_2d = ExtResource("2_jdyx3")
+heroDict = {
+"Dancer": ExtResource("9_fxwph"),
+"Ghost": ExtResource("8_v41ng"),
+"Jewel": ExtResource("10_ku4o6"),
+"Lantern": ExtResource("7_xya15"),
+"Magma": ExtResource("6_wq4nn"),
+"Skeleton": ExtResource("5_fb73r"),
+"TechMouse": ExtResource("2_3u2vc"),
+"TinyMan": ExtResource("4_1yvpr"),
+"TreeHead": ExtResource("3_lduvi"),
+"Warrior": ExtResource("11_f52ux")
+}
+metadata/_edit_use_anchors_ = true
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+collapsed = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Left Panel" type="PanelContainer" parent="HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("13_jsudl")
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/Left Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="HSplitContainer/Left Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/Left Panel/MarginContainer/AspectRatioContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 10
+
+[node name="GameTitle" type="Label" parent="HSplitContainer/Left Panel/MarginContainer/AspectRatioContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 120
+text = "TITLE"
+label_settings = ExtResource("2_84w6v")
+
+[node name="GameSubtitle" type="Label" parent="HSplitContainer/Left Panel/MarginContainer/AspectRatioContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 60
+text = "SUBTITLE"
+label_settings = ExtResource("2_xyiiu")
+horizontal_alignment = 1
+
+[node name="GameCredits" type="Label" parent="HSplitContainer/Left Panel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 15
+text = "CREDUTS BKAH BLAH VKAH
+"
+label_settings = ExtResource("2_4kyat")
+
+[node name="Right Panel" type="PanelContainer" parent="HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="HSplitContainer/Right Panel"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/Right Panel/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 20
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="HSplitContainer/Right Panel/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/Right Panel/Panel/MarginContainer/AspectRatioContainer"]
+layout_mode = 2
+
+[node name="Top Row Stats" parent="HSplitContainer/Right Panel/Panel/MarginContainer/AspectRatioContainer/VBoxContainer" instance=ExtResource("2_apq7f")]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="HSplitContainer/Right Panel/Panel/MarginContainer/AspectRatioContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("18_bl42f")
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/Right Panel/Panel/MarginContainer/AspectRatioContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+metadata/_edit_use_anchors_ = true
+
+[node name="heroTexture" type="TextureRect" parent="HSplitContainer/Right Panel/Panel/MarginContainer/AspectRatioContainer/VBoxContainer/Panel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_stretch_ratio = 0.5
+texture = ExtResource("3_pkass")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="RestockLabel" type="Label" parent="HSplitContainer/Right Panel/Panel/MarginContainer/AspectRatioContainer/VBoxContainer/Panel/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "RESTOCK!!!!!!"
+label_settings = ExtResource("2_xyiiu")
+horizontal_alignment = 1
+
+[node name="Health_Bar" parent="HSplitContainer/Right Panel/Panel/MarginContainer/AspectRatioContainer/VBoxContainer" instance=ExtResource("2_1sob7")]
+layout_mode = 2
+
+[node name="UiHealingRow" parent="HSplitContainer/Right Panel/Panel/MarginContainer/AspectRatioContainer/VBoxContainer" instance=ExtResource("3_21b42")]
+layout_mode = 2
+
+[node name="OptionsAndResetRow" parent="HSplitContainer/Right Panel/Panel/MarginContainer/AspectRatioContainer/VBoxContainer" instance=ExtResource("4_jnh7o")]
+layout_mode = 2

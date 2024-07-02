@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://byu1vanfxt5e"]
+
+[ext_resource type="FontFile" uid="uid://sd738si6boxi" path="res://Assets/Fonts/Romulus.ttf" id="1_cx1yd"]
+
+[resource]
+line_spacing = 2.0
+font = ExtResource("1_cx1yd")
+font_size = 26
+outline_size = 6
+outline_color = Color(0.27451, 0.258824, 0.368627, 1)
